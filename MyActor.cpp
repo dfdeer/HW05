@@ -9,7 +9,6 @@ AMyActor::AMyActor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
 }
 
 // Called when the game starts or when spawned
@@ -46,6 +45,8 @@ void AMyActor::Move() {
 
 		UE_LOG(LogTemp, Warning, TEXT("Step %d: Current Position(%.0f, %.0f), Distance: %.1f"), i + 1, start.X, start.Y, Distance(first, second));
 	}
+	FVector zero = FVector(0, 0, 0);
+	UE_LOG(LogTemp, Warning, TEXT("Total Distance: %.1f"), Distance(zero, start));
 }
 
 float AMyActor::Distance(FVector first, FVector second) {
