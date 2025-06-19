@@ -12,7 +12,7 @@ class HW05_API AMyActor : public AActor
 	GENERATED_BODY()
 	
 private:
-	FVector start;
+	FVector start = FVector(0, 0, 0);
 
 public:	
 	// Sets default values for this actor's properties
